@@ -17,11 +17,19 @@ public class UsuariosServiciosImp implements UsuariosServicios {
     UsuarioRepositorio usuarioRepositorio;
 
     @Override
+    public Usuarios guardar(Usuarios usuario) {
+        return usuarioRepositorio.save(usuario);
+    }
+
+
+    @Override
     public List<Usuarios> listar() {
         return usuarioRepositorio.findAll();
     }
     @Override
     public Optional<Usuarios> getbyCorreo(String Correo) {
         return usuarioRepositorio.findById(Correo);
+
+        
     }
 }

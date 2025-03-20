@@ -8,6 +8,8 @@ import com.LoginV2.login.entities.Usuarios;
 public interface UsuariosServicios {
     
 
+    Usuarios guardar(Usuarios usuario);
+
     List<Usuarios> listar();
 
     Optional<Usuarios> getbyCorreo(String Correo);
