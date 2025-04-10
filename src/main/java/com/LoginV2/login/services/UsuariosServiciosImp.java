@@ -26,6 +26,7 @@ public class UsuariosServiciosImp implements UsuariosServicios {
     public List<Usuarios> listar() {
         return usuarioRepositorio.findAll();
     }
+    
     @Override
     public Optional<Usuarios> getbyCorreo(String Correo) {
         return usuarioRepositorio.findById(Correo);
